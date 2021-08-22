@@ -30,7 +30,7 @@
                    CATEGORIA: <input type="text" class="form-control" name="categoria"><br>
                    FECHA EXPIRACION: <input type="date" class="form-control" name="fechaExp"><br>
                    <div class="text-center">
-                        <input type="submit" class="btn btn-success px-4" name="accion" value="Update"><br>
+                        <input type="submit" class="btn btn-success px-4" name="accion" value="Guardar"><br>
                    </div>
                    
                </form>

@@ -1,7 +1,7 @@
 package com.dao;
 
 import com.model.Producto;
-import db.dbConnection;
+import com.db.dbConnection;
 import jakarta.security.auth.message.callback.PrivateKeyCallback;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,7 +19,7 @@ public class ProductoDAO {
     
     public List<Producto> getProduct(){
         dbConnection conn = new dbConnection();
-        String sql = "SELECT * FROM product";
+        String sql = "SELECT * FROM product ORDER BY id";
         List<Producto> listar = new LinkedList<>();
         try
         {
@@ -133,7 +133,6 @@ public class ProductoDAO {
         dbConnection conn = new dbConnection();
         String sql = "SELECT * FROM product WHERE nombre = ?";
         List<Producto> listSearch = new LinkedList<>();
-        System.out.println("Nombre +===+> " +nombre);
         try
         {
             PreparedStatement psSearch = conn.getConnectio().prepareStatement(sql);

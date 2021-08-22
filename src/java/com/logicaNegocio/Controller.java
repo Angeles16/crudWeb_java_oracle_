@@ -50,6 +50,7 @@ public class Controller extends HttpServlet {
                 request.getRequestDispatcher("newProduct.jsp").forward(request, response);
                 break;
             case "Guardar":
+                System.out.println("Entro a guardar");
                 SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
                 String parNombre = request.getParameter("nombre");
                 double parPrecio = Double.parseDouble(request.getParameter("precio"));
@@ -122,7 +123,6 @@ public class Controller extends HttpServlet {
             case "Search":
                 String name = request.getParameter("search");
                 List<Producto> listUpd = prodDao.Search(name);
-                System.out.println("NAME => "+ name);
                 request.setAttribute("data", listUpd);
                 request.getRequestDispatcher("searchIndex.jsp").forward(request, response);
                 break;

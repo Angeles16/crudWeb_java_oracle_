@@ -17,7 +17,7 @@
         <div class="container-fluid pt-3">
             <a class="navbar-brand">CRUD</a>
             <form action="controller" method="post" class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
                 <button class="btn btn-outline-success" type="submit" name="accion" value="Search">Search</button>
             </form>
         </div>

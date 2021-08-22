@@ -5,7 +5,7 @@
  */
 package com.test;
 
-import db.dbConnection;
+import com.db.dbConnection;
 
 /**
  *
